@@ -1,0 +1,11 @@
+1.
+int findDuplicate(int* nums, int numsSize){
+  int s1 = 0,s2=0;
+  while ((s1 = nums[s1]) != (s2 = nums[nums[s2]]))
+    ;
+  s1 = 0;
+  while ((s1= nums[s1]) != (s2 = nums[s2])) 
+    ;
+  return s1;
+}
+

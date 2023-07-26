@@ -1,0 +1,20 @@
+4.
+int uniqueOccurrences(int* arr, int arrSize) {
+    int occurrenceCount[2001] = {0}; 
+    for (int i = 0; i < arrSize; i++) {
+        occurrenceCount[arr[i] + 1000]++; 
+        }
+    int uniqueCounts[1001] = {0};
+    for (int i = 0; i < 2001; i++) {
+        if (occurrenceCount[i] != 0) {
+            int count = occurrenceCount[i];
+            if (uniqueCounts[count] != 0) {
+                return 0; 
+            }
+            uniqueCounts[count] = 1;
+        }
+    }
+    
+    return 1;  
+}
+
